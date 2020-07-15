@@ -20,7 +20,7 @@ overview of development process
 
 
 #### Learning Objectives
-At the end of this module the successful student will be able to:  
+At the end of this module the successful learner will be able to:  
 * explain the rationale for wrting packages  
 * find and explore their own package library/libraries  
 * describe the different states a package can be in  
@@ -31,6 +31,7 @@ At the end of this module the successful student will be able to:
 r user, otherwise very few
 r installed
 
+---
 
 ### Setting up your system to develop version controlled package with devtools in RStudio
 
@@ -43,13 +44,15 @@ set up for use of git and git hub
 use of github in Rstudio
 
 #### Learning Objectives
-At the end of this module the successful student will be able to:
-* 
-* 
-* 
-* 
+At the end of this module the successful learner will be able to:  
+*   
+*   
+*   
+*   
 
 #### Prerequisites
+
+---
 
 ### A simple package
 
@@ -58,14 +61,17 @@ minimal package
 workflows, file discipline, working directories, organisation
 
 #### Learning Objectives
-At the end of this module the successful student will be able to:
-* 
-* 
-* 
-* 
+At the end of this module the successful learner will be able to:  
+*   
+*   
+*   
+*   
 
 #### Prerequisites
 
+
+
+---
 ### Package documentation
 
 types of documentation: about the package metadata
@@ -77,50 +83,57 @@ object documentation roxygen
 workflow
 
 #### Learning Objectives
-At the end of this module the successful student will be able to:
-* 
-* 
-* 
-* 
+At the end of this module the successful learner will be able to:  
+*   
+*   
+*   
+*   
 
 #### Prerequisites
+
+---
 
 ### five
 
 Outline
 
 #### Learning Objectives
-At the end of this module the successful student will be able to:
-* 
-* 
-* 
-* 
+At the end of this module the successful learner will be able to:  
+*   
+*   
+*   
+*   
 
 #### Prerequisites
+
+---
 
 ### six
 
 Outline
 
 #### Learning Objectives
-At the end of this module the successful student will be able to:
-* 
-* 
-* 
-* 
+At the end of this module the successful learner will be able to:  
+*   
+*   
+*   
+*   
 
 #### Prerequisites
+
+
+---
 
 ### seven
 
 Outline
 
 #### Learning Objectives
-At the end of this module the successful student will be able to:
-* 
-* 
-* 
-* 
+At the end of this module the successful learner will be able to:  
+*   
+*   
+*   
+*   
 
 #### Prerequisites
  
