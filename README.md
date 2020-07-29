@@ -9,9 +9,15 @@ To modularise Forwards Package Development materials to increase our ability to 
 
 ## Guiding principles
 
+Approach: use of RStudio and devtools  
+command line, RStudio menus, keyboard shortcuts all given  
+Based on R Packages (Wickham and Bryan) - most common components  
+Achievable workflow recipes rather than detailed understanding (see Writing R extensions for the latter)
+
+
 The collection of modules should be:  
 * reviewed annually by the Teaching Team  
-* stackable with suggested curricula for workshops of different lengths  
+* stackable with suggested curricula for workshops of different lengths; some modules could be used as self study before a workshop (e.g., System set up, In a nutshell)  
 * be branded as by Forwards Teaching Team  
 * be accompanied by a glossary  
 * surveys which are also organised as common front question plus module specific  

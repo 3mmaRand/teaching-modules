@@ -1,6 +1,5 @@
 # Preparation for Forwards Workshop
 
-Last updated: 3rd March 2020
 
 ## Computing requirements
 
