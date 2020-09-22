@@ -367,6 +367,7 @@ summary {
 
 <div id="forwards-package-development-modules" class="section level1">
 <h1>Forwards Package development modules</h1>
+<p><strong>A WORK IN PROGRESS!</strong></p>
 <div id="computing-requirements" class="section level2">
 <h2>Computing requirements</h2>
 <p><a href="Computing_requirements.md">Computing requirements overall</a></p>
@@ -375,17 +376,32 @@ summary {
 <h2>Modules</h2>
 <div id="packages-in-a-nutshell" class="section level3">
 <h3>Packages in a nutshell</h3>
-<p>What is a package, A package is shareable code. Why write a package? impact, recognition, documentation</p>
-<p>Where do they live on your computer, where do they come from Components of a package: demo of package we will develop; demo of well known Package states Forwards approach to packages: devtools and rstudio overview of development process</p>
-<p>Ref: Chapter 4 Package structure and state</p>
+<div id="outline" class="section level4">
+<h4>Outline</h4>
+<p>What is a package - unit of sharable code<br />
+Why write a package? impact, recognition, documentation<br />
+Where do they live on your computer<br />
+where do they come from<br />
+Components of a package: demo of package we will develop; demo of well known<br />
+Package states<br />
+Forwards approach to packages: devtools and rstudio<br />
+overview of development process; needs rtools/XCode/<code>r-base-dev</code>, git recommended</p>
+<p>Ref: Packages Chapter 4 Package structure and state</p>
+</div>
 <div id="learning-objectives" class="section level4">
 <h4>Learning Objectives</h4>
-<p>At the end of this module the successful learner will be able to:<br />
-* explain the rationale for wrting packages<br />
-* find and explore their own package library/libraries<br />
-* describe the different states a package can be in<br />
-* describe the key components of a package<br />
-* outline the development of a package using devtools</p>
+<p>At the end of this module the successful learner will be able to:</p>
+<ul>
+<li>explain the rationale for writing packages<br />
+</li>
+<li>find and explore their own package library/libraries<br />
+</li>
+<li>describe the different states a package can be in<br />
+</li>
+<li>describe the key components of a package<br />
+</li>
+<li>outline the development of a package using devtools</li>
+</ul>
 </div>
 <div id="prerequisites" class="section level4">
 <h4>Prerequisites</h4>
@@ -396,23 +412,42 @@ summary {
 <hr />
 </div>
 </div>
-<div id="setting-up-your-system-to-develop-version-controlled-package-with-devtools-in-rstudio" class="section level3">
-<h3>Setting up your system to develop version controlled package with devtools in RStudio</h3>
-<p>R version, Rstudio versions, packages needed, Rtools<br />
-has_devel()<br />
-Windows, Mac, Linux,<br />
-what the packages do<br />
-Rprofile - if interactive require devtools.<br />
-set up for use of git and git hub<br />
-use of github in Rstudio</p>
-<p>Ref: Chapter 3 System setup</p>
+<div id="setting-up-your-system" class="section level3">
+<h3>Setting up your system</h3>
+<div id="outline-1" class="section level4">
+<h4>Outline</h4>
+<p>Setting up your system to develop version controlled package with <code>devtools</code> in RStudio</p>
+<p>R version, Rstudio versions - discuss but should have been done<br />
+packages needed: devtools, roxygen2, testthat, knitr - ditto<br />
+R build toolchain: Rtools(windows) or XCode (mac) or <code>r-base-dev</code>; <code>has_devel()</code> - ditto<br />
+git - ditto - check Tools | Global Options | Git/SVN tab - path to git included</p>
+<p>Opportunity to carry out in session if not done.</p>
+<p>we need devtools but development process includes restarting session therefore put this in .Rprofile</p>
+<pre><code>if (interactive()) {
+  suppressMessages(require(devtools))
+}</code></pre>
+<p>Can be done with <code>use_devtools()</code><br />
+Add <code>options()</code> to .Rprofile to set maintainer name, license defaults.</p>
+<p>Use of RStudio projects</p>
+<p>set up for use of git and github in Rstudio - can do with a RS project (no need to be a pkg) - minimal/little detail on git (refer to a more detailed module on git) usethis::use_git() - initilaises a git repo and makes initial commit (if you select that option)</p>
+<p>Do Tools | Version Control | Project Setup and selcting git will also initialise a git repo</p>
+<p>github: using “Existing project github last” and https approach - use_github(), error, browse_github_token(), generate and copy token, add to .Renviron with usethis::edit_r_environ(), restart and do use_github(),</p>
+<p>Ref: Packages Chapter 3 System setup; Packages Chapter 2 The whole game 2.5 and 2.17</p>
+</div>
 <div id="learning-objectives-1" class="section level4">
 <h4>Learning Objectives</h4>
-<p>At the end of this module the successful learner will be able to:<br />
-*<br />
-*<br />
-*<br />
-*</p>
+<p>At the end of this module the successful learner will be able to:</p>
+<ul>
+<li>list and install the programs and packages required for version controlled package development with <code>devtools</code> in RStudio<br />
+</li>
+<li>check these are available to RStudio</li>
+<li>edit their .Rprofile to ensure devtools is loaded<br />
+</li>
+<li>configure git for use, initialise an RStudio project as a git repo</li>
+<li>authorise and link to a github repo<br />
+</li>
+<li></li>
+</ul>
 </div>
 <div id="prerequisites-1" class="section level4">
 <h4>Prerequisites</h4>
@@ -427,44 +462,70 @@ use of github in Rstudio</p>
 </div>
 <div id="a-simple-package" class="section level3">
 <h3>A simple package</h3>
-<p>minimal package load devtools<br />
-describe pkg to be built;</p>
-<p>Ref: Chapter 2 The whole game</p>
+<div id="outline-2" class="section level4">
+<h4>Outline</h4>
+<p>minimal package, one function load devtools<br />
+describe pkg to be built; using workflow: Existing project, GitHub last: create_package, use_git, use_github or 2.</p>
+<p>make a function, load_all(), check(), add roxygen, document(), alter DESCRIPTION, add a LICENSE (refer to package documentation module)</p>
+<p>Ref: Packages Chapter 2 The whole game; Happy Git and GitHub for the useR Chapter ..</p>
+</div>
 <div id="learning-objectives-2" class="section level4">
 <h4>Learning Objectives</h4>
 <p>At the end of this module the successful learner will be able to:<br />
-*<br />
-*<br />
-*<br />
-*</p>
+* create a simple version controlled package<br />
+* link the package to github<br />
+* explain the key components of a minimal package<br />
+* create and document a function with roxygen2 and document() * use the package interactively with load_all()<br />
+* use check() to execute R CMD check * explain, create and populate a DESCRIPTION file * add a LICENSE file and explain the rationale for doing so</p>
 </div>
 <div id="prerequisites-2" class="section level4">
 <h4>Prerequisites</h4>
 <ul>
-<li>Packages in a nutshell or equivalent</li>
-<li>Setting up your system… or equivalent</li>
+<li>r and rstudio installed</li>
+<li>git installed, github acc, github use authorised</li>
+<li>devtools, roxygen2, testthat, knitr<br />
+</li>
+<li>R build toolchain: Rtools(windows) or XCode (mac) or <code>r-base-dev</code></li>
 </ul>
-</div>
-</div>
-<div id="five" class="section level3">
-<h3>five</h3>
-<p>Outline</p>
-<div id="learning-objectives-3" class="section level4">
-<h4>Learning Objectives</h4>
-<p>At the end of this module the successful learner will be able to:<br />
-*<br />
-*<br />
-*<br />
-*</p>
-</div>
-<div id="prerequisites-3" class="section level4">
-<h4>Prerequisites</h4>
+<p>See Packages in a nutshell and Setting up your system…</p>
 <hr />
 </div>
 </div>
-<div id="six" class="section level3">
-<h3>six</h3>
-<p>Outline</p>
+<div id="package-documentation" class="section level3">
+<h3>Package documentation</h3>
+<div id="outline-3" class="section level4">
+<h4>Outline</h4>
+<p>types of documentation: about the package metadata DESCRIPTION file dependencies licenses version object documentation roxygen workflow</p>
+<p>Ref:</p>
+</div>
+<div id="learning-objectives-3" class="section level4">
+<h4>Learning Objectives</h4>
+<p>At the end of this module the successful learner will be able to:</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div id="prerequisites-3" class="section level4">
+<h4>Prerequisites</h4>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="git-and-github" class="section level3">
+<h3>Git and GitHub</h3>
+<div id="outline-4" class="section level4">
+<h4>Outline</h4>
+<p>what is version control and why use it Git and GitHub (reference other options) RStudio approach (contextualise) Workflow: GitHub flow Principles of git: init, commit, clone, fork, diff, branch, push, pull, merge</p>
+<p>“New project, GitHub first” workflow for package dev: create repo on gh, new project | version control | git. then set up package structure with Tools &gt; Project Options &gt; Build Tools. Select Package and use_description(), use_namespace(), use_r(“funtname”)</p>
+<p>Ref: Happy Git and GitHub for the useR Chapters 4,5,6,7,8; <a href="https://docs.github.com/en" class="uri">https://docs.github.com/en</a>; <a href="https://the-turing-way.netlify.app/reproducible-research/vcs.html" class="uri">https://the-turing-way.netlify.app/reproducible-research/vcs.html</a>; <a href="https://edav.info/github.html" class="uri">https://edav.info/github.html</a></p>
+</div>
 <div id="learning-objectives-4" class="section level4">
 <h4>Learning Objectives</h4>
 <p>At the end of this module the successful learner will be able to:<br />
@@ -475,22 +536,38 @@ describe pkg to be built;</p>
 </div>
 <div id="prerequisites-4" class="section level4">
 <h4>Prerequisites</h4>
-<hr />
+<ul>
+<li>r and rstudio installed</li>
+<li>git installed, github acc, github use authorised</li>
+<li>devtools, roxygen2, testthat, knitr<br />
+</li>
+<li>R build toolchain: Rtools(windows) or XCode (mac) or <code>r-base-dev</code></li>
+<li>ability to create a minimal version controlled package using the using “Existing project, GitHub last” workflow: See Packages in a nutshell, Setting up your system… and A simple package —</li>
+</ul>
 </div>
 </div>
-<div id="seven" class="section level3">
-<h3>seven</h3>
-<p>Outline</p>
+<div id="six" class="section level3">
+<h3>six</h3>
+<div id="outline-5" class="section level4">
+<h4>Outline</h4>
+</div>
 <div id="learning-objectives-5" class="section level4">
 <h4>Learning Objectives</h4>
-<p>At the end of this module the successful learner will be able to:<br />
-*<br />
-*<br />
-*<br />
-*</p>
+<p>At the end of this module the successful learner will be able to:</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
 </div>
 <div id="prerequisites-5" class="section level4">
 <h4>Prerequisites</h4>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
 </div>
 </div>
 </div>

@@ -9,6 +9,8 @@
 
 ### Packages in a nutshell
 
+#### Outline
+
 What is a package - unit of sharable code    
 Why write a package? impact, recognition, documentation   
 Where do they live on your computer  
@@ -18,23 +20,34 @@ Package states
 Forwards approach to packages: devtools and rstudio  
 overview of development process; needs rtools/XCode/`r-base-dev`, git recommended   
 
-Ref: Chapter 4 Package structure and state
+Ref: Packages Chapter 4 Package structure and state
 
 #### Learning Objectives
-At the end of this module the successful learner will be able to:  
-* explain the rationale for wrting packages  
+
+At the end of this module the successful learner will be able to:
+
+* explain the rationale for writing packages  
 * find and explore their own package library/libraries  
 * describe the different states a package can be in  
 * describe the key components of a package  
 * outline the development of a package using devtools   
 
 #### Prerequisites
+
 * r user, otherwise very few
 * r and rstudio installed
 
+
+
+
+
 ---
 
-### Setting up your system to develop version controlled package with `devtools` in RStudio
+### Setting up your system 
+
+#### Outline
+
+Setting up your system to develop version controlled package with `devtools` in RStudio
 
 R version, Rstudio versions  - discuss but should have been done  
 packages needed: devtools, roxygen2, testthat, knitr  - ditto  
@@ -61,10 +74,12 @@ Do Tools | Version Control | Project Setup and selcting git will also initialise
 
 github: using "Existing project github last" and https approach - use_github(), error, browse_github_token(), generate and copy token, add to .Renviron with usethis::edit_r_environ(), restart and do use_github(),
 
-Ref: Chapter 3 System setup; Chapter 2 The whole game 2.5 and 2.17 
+Ref: Packages Chapter 3 System setup; Packages Chapter 2 The whole game 2.5 and 2.17 
 
 #### Learning Objectives
+
 At the end of this module the successful learner will be able to:  
+
 * list and install the programs and packages required for version controlled package development with `devtools` in RStudio  
 * check these are available to RStudio
 * edit their .Rprofile to ensure devtools is loaded  
@@ -73,6 +88,7 @@ At the end of this module the successful learner will be able to:
 *   
 
 #### Prerequisites
+
 * r and rstudio installed
 * git installed
 * github account
@@ -82,17 +98,17 @@ At the end of this module the successful learner will be able to:
 
 ### A simple package
 
-minimal package
+#### Outline
+
+minimal package, one function
 load devtools  
 describe pkg to be built; 
-two approaches possible chose one or cover both??
-1. Existing project, GitHub last: create_package, use_git, use_github or 2.
-2. New project, GitHub first: create repo on gh, new project | version control | git.  then set up package structure with Tools > Project Options > Build Tools. Select Package and use_description(), use_namespace(), use_r("fnctname") 
-make a function, load_all(), check(), add roxygen, document(), alter DESCRIPTION, add a LICENSE
+using workflow: Existing project, GitHub last: create_package, use_git, use_github, make a function, load_all(), check(), add roxygen, document(), alter DESCRIPTION, add a LICENSE (refer to package documentation module)
 
-Ref: Chapter 2 The whole game
+Ref: Packages Chapter 2 The whole game; Happy Git and GitHub for the useR Chapter ..
 
 #### Learning Objectives
+
 At the end of this module the successful learner will be able to:  
 * create a simple version controlled package  
 * link the package to github  
@@ -104,14 +120,19 @@ At the end of this module the successful learner will be able to:
 * add a LICENSE file and explain the rationale for doing so
 
 #### Prerequisites
+
 * r and rstudio installed
 * git installed, github acc, github use authorised
 * devtools, roxygen2, testthat, knitr  
 * R build toolchain: Rtools(windows) or XCode (mac) or `r-base-dev`
+
 See Packages in a nutshell and Setting up your system...  
 
 ---
+
 ### Package documentation
+
+#### Outline
 
 types of documentation: about the package metadata
 DESCRIPTION file
@@ -121,22 +142,41 @@ version
 object documentation roxygen
 workflow
 
+Ref: 
+
 #### Learning Objectives
+
 At the end of this module the successful learner will be able to:  
+
 *   
 *   
 *   
 *   
 
 #### Prerequisites
+
+* 
+* 
+* 
 
 ---
 
-### five
+### Git and GitHub
 
-Outline
+#### Outline
+
+what is version control and why use it
+Git and GitHub (reference other options)
+RStudio approach (contextualise)
+Workflow: GitHub flow
+Principles of git: init, commit, clone, fork, diff, branch, push, pull, merge
+
+"New project, GitHub first" workflow for package dev: create repo on gh, new project | version control | git.  then set up package structure with Tools > Project Options > Build Tools. Select Package and use_description(), use_namespace(), use_r("funtname") 
+
+Ref: Happy Git and GitHub for the useR Chapters 4,5,6,7,8; https://docs.github.com/en; https://the-turing-way.netlify.app/reproducible-research/vcs.html; https://edav.info/github.html
 
 #### Learning Objectives
+
 At the end of this module the successful learner will be able to:  
 *   
 *   
@@ -145,20 +185,32 @@ At the end of this module the successful learner will be able to:
 
 #### Prerequisites
 
+* r and rstudio installed
+* git installed, github acc, github use authorised
+* devtools, roxygen2, testthat, knitr  
+* R build toolchain: Rtools(windows) or XCode (mac) or `r-base-dev`
+* ability to create a minimal version controlled package using the using "Existing project, GitHub last" workflow:
+See Packages in a nutshell,  Setting up your system... and A simple package 
 ---
 
 ### six
 
-Outline
+#### Outline
 
 #### Learning Objectives
+
 At the end of this module the successful learner will be able to:  
+
 *   
 *   
 *   
 *   
 
 #### Prerequisites
+
+*
+* 
+* 
 
 
 
